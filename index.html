@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ebd2f741ac.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Test Case</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top bg-white" style="z-index: 2;">
+        <div class="col d-flex justify-content-between align-items-center">
+            <div class="position-absolute" style="z-index: 9999;">
+                <button class="btn border-0" type="button" onclick="showDrawer()">
+                    <span class="material-symbols-outlined" style="font-size: 40px; font-weight: 600">menu</span>
+                </button>
+            </div>
+            <div class="row w-100 d-flex justify-content-center position-relative">
+                <div style="width: fit-content;">
+                    <a href="">
+                        <h1 class="text-center">
+                            <img style="max-width: 100px;"
+                                src="https://cdn.shopify.com/s/files/1/0895/1746/files/logo_clr_170x.png?v=1652089220"
+                                alt="">
+                        </h1>
+                    </a>
+                </div>
+            </div>
+            <div class="position-absolute" style="right: 24px;">
+                <div class="d-flex align-middle">
+                    <div class="d-flex align-items-center">
+                        <div class="btn-group">
+                            <button class="bg-white border border-dark border-2 rounded-pill" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                                <i class="fa-solid fa-chevron-down fa-xs"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-center text-center rounded-0 border-dark">
+                                <li class="dropdown-item">Deutsch</li>
+                                <li class="dropdown-item active">English</li>
+                                <li class="dropdown-item">Español</li>
+                                <li class="dropdown-item">Français</li>
+                                <li class="dropdown-item">Italiano</li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="bg-white border border-dark border-2 rounded-pill ms-1" style="width: 60px;"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                $
+                                <i class="fa-solid fa-chevron-down fa-xs ms-1"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-center text-end rounded-0 border-dark">
+                                <li class="dropdown-item">France (EUR €)</li>
+                                <li class="dropdown-item">Germany (EUR €)</li>
+                                <li class="dropdown-item">Spain (EUR €)</li>
+                                <li class="dropdown-item">United Kingdom (GBP £)</li>
+                                <li class="dropdown-item active">United States (USD $)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="text-dark ms-2 d-flex align-items-center">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">person</span>
+                    </a>
+                    <a href="#" class="text-dark d-flex align-items-center">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">search</span>
+                    </a>
+                    <a href="#" class="text-dark d-flex align-items-center">
+                        <span class="material-symbols-outlined" style="font-size: 35px;">shopping_cart</span>
+                        <span class="badge d-none d-flex align-items-center justify-content-center"
+                            style="border-radius: 50%; width: 26px; height: 26px; background: #fa766a;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" data-bs-backdrop="static" name="sidebar" tabindex="-1" id="staticBackdrop"
+        aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                I will not close if you click outside of me.
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div class="p-4">
+                <div class="col">
+                    <h6 class="mb-3" style="color: #fa766a;">Our favourites</h6>
+                    <div class="mb-3">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">all</span>
+                                    <sup>24</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">backpacks</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">blankets</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">chairs</span>
+                                    <sup>1</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">containers</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">cookware</span>
+                                    <sup>3</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">cups</span>
+                                    <sup>1</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">hats</span>
+                                    <sup>1</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">jackets & coats</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">lights</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">sleeping bags</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">tents</span>
+                                    <sup>2</sup>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-black ps-0" style="text-decoration: none;">
+                                    <span class="categories">tools</span>
+                                    <sup>4</sup>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div style="padding: 60px 30px 90px; margin: 30px 0px 0px;">
+                <div class="col d-flex justify-content-center">
+                    <div style="width: 800px;">
+                        <h6 class="text-center mb-3" style="color: #fa766a;">Browse by category</h6>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black">Blankets</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Tents</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Sleeping bags</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Lights</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Tools</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Backpacks</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Hats</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Chairs</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Pillows</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Containers</a>
+                            </li>
+                            <li class="nav-item category" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black py-0">Cookware</a>
+                            </li>
+                            <li class="nav-item" style="font-size: 40px;">
+                                <a href="" class="nav-link text-black">Coats & Jackets</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-4 d-flex position-relative">
+                <video autoplay muted loop class="w-100"
+                    style="height: auto; object-position: center center; object-fit: cover">
+                    <source
+                        src="https://cdn.shopify.com/s/files/1/0895/1746/files/Mountains_in_the_fog.mp4?v=1651652817">
+                </video>
+                <!-- <div style="overflow: hidden;">
+                </div> -->
+                <div class="position-absolute"
+                    style="max-width: 808px; height: 100%; top: calc(50% - 123px); left: calc(50% - 404px)">
+                    <div class="d-flex align-items-center">
+                        <div class="col text-white text-center p-4">
+                            <h1>Outdoor in style</h1>
+                            <p>We like to travel, be outdoors, experience the entire globe and to do that, well, we
+                                needed the best material. And we decided to make them, with some of the most awesome,
+                                talented people we could find. </p>
+                            <button class="btn border border-white rounded-0 text-white mt-3 px-3">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-4">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card rounded-0 border-0 mb-4">
+                            <img src="https://cdn.shopify.com/s/files/1/0895/1746/products/Cantimplora_vintage01_1024x1024.jpg?v=1620889382"
+                                alt="">
+                        </div>
+                        <div class="card rounded-0 border-0 mb-4">
+                            <img src="https://cdn.shopify.com/s/files/1/0895/1746/products/Cantimplora_vintage02_1024x1024.jpg?v=1620889398"
+                                alt="">
+                        </div>
+                        <div class="card rounded-0 border-0">
+                            <img src="https://cdn.shopify.com/s/files/1/0895/1746/products/Cantimplora_vintage03_1024x1024.jpg?v=1620889398"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="position-sticky" style="top: 72px">
+                            <h1>Aluminium canteen</h1>
+                            <h2 style="color: #fa766a;" class="mb-1">$35</h2>
+                            <div>
+                                <h5 class="mt-4">
+                                    <strong>Color</strong>:
+                                    <span name="selected_color">GoldenRod</span>
+
+                                </h5>
+                                <label for="">
+                                    <input type="radio" name="color" id="option1" class="option1" value="GoldenRod"
+                                        onclick="handleColor()" checked>
+                                </label>
+                                <label for="">
+                                    <input type="radio" name="color" id="option2" class="option2" value="Olive"
+                                        onclick="handleColor()">
+                                </label>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn rounded-0 border border-2 border-dark w-100"
+                                        onclick="addToCart()">
+                                        <strong>Add to cart</strong>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-dark rounded-0 w-100">
+                                        <strong>Buy it now</strong>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mt-3" style="font-size: 15px; line-height: 26px;">
+                                    Aluminum canteen with hermetic closure and embroidered felt lining. Includes a
+                                    carabiner
+                                    to hang on backpacks and bags. Its lightness makes it the perfect accessory to take
+                                    when
+                                    camping or picnicking.
+                                </p>
+                                <h6>This is a demonstration store. You can purchase this product at <a href=""
+                                        style="color: #fa766a;">zara</a> </h6>
+                            </div>
+                            <div class="mt-3">
+                                <div class="accordion accordion-flush border-top border-bottom" id="accordion-data">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-shippingHeader">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseShipping"
+                                                aria-expanded="false"
+                                                aria-controls="#flush-collapseShipping">Shipping</button>
+                                        </h2>
+                                        <div id="flush-collapseShipping" class="accordion-collapse collapse"
+                                            aria-labelledby="#flush-shippingHeader" data-bs-parent="#accordion-data">
+                                            <div class="accordion-body">
+                                                <p>All orders of $75 or more qualify for free economy shipping. No
+                                                    promotional code needed. For items with special services such as
+                                                    hemming
+                                                    or debossing, please allow three additional days for handling, prior
+                                                    to
+                                                    shipping. Expedited services and international order shipping rates
+                                                    have
+                                                    not changed.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="natural-materialsHeading">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#natural-materialBody"
+                                                aria-expanded="false" aria-controls="#natural-materialBody">Natural
+                                                Materials</button>
+                                        </h2>
+                                        <div class="accordion-collapse collapse" id="natural-materialBody"
+                                            aria-labelledby="#natural-materialsHeading"
+                                            data-bs-parent="#accordion-data">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Our products are made with natural materials, an easy One size fit
+                                                    and
+                                                    designed to last. We are committed to sustainability and ethical
+                                                    manufacturing. By combining meticulous craftsmanship with modern
+                                                    ways of
+                                                    thinking, we try to give an alternative to fast fashion.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="care-instructionsHeading">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#care-instructionsBody" aria-expanded="false"
+                                                aria-controls="#care-instructionsBody">Care Instructions</button>
+                                        </h2>
+                                        <div id="care-instructionsBody" class="accordion-collapse collapse"
+                                            aria-labelledby="#care-instructionsHeading" data-bs-parent="accordion-data">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    When your clothes need a wash, don’t simply stick them in the washer
+                                                    as
+                                                    you might do usually; follow these guidelines. Use a gentle cleaning
+                                                    cycle, and opt for an eco-friendly detergent; not only is that
+                                                    better
+                                                    for the environment, it is more gentle for the fabric too and keeps
+                                                    everything as fresh and clean as possible.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <a href="">
+                                            <div class="d-flex justify-content-center align-items-center rounded-circle"
+                                                style="height: 36px; width: 36px; background-color: #d8d8d8;">
+                                                <i class="fa-brands fa-facebook-f text-white"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ms-3">
+                                        <a href="">
+                                            <div class="d-flex justify-content-center align-items-center rounded-circle"
+                                                style="height: 36px; width: 36px; background-color: #d8d8d8;">
+                                                <i class="fa-brands fa-twitter text-white"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ms-3">
+                                        <a href="">
+                                            <div class="d-flex justify-content-center align-items-center rounded-circle"
+                                                style="height: 36px; width: 36px; background-color: #d8d8d8;">
+                                                <i class="fa-brands fa-pinterest-p text-white"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-4 d-flex justify-content-center">
+                <div class="col" style="max-width: 1100px;">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="card border-0 rounded-0">
+                                <img src="https://cdn.shopify.com/s/files/1/0895/1746/files/Screenshot_2022-01-28_at_16.14.53_2048x.png?v=1646223862"
+                                    style="max-width: 730px; height: 748.44px;" alt="">
+                                <div class="d-flex align-self-end"
+                                    style="position: absolute; bottom: 0; height: 37px; width: 100%; background-color: rgba(110, 110, 110, 0.6);">
+                                    <p class="text-white" style="margin: auto;">Gift sets for the winter season</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 ms-0">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://cdn.shopify.com/s/files/1/0895/1746/products/Abrigo01_590x590.jpg?v=1643385417"
+                                        style="max-width: 360px;" alt="">
+                                    <div class="mt-2">
+                                        <p class="text-center" style="font-size: 15px;">
+                                            <span style="color: #fa766a;">$140</span>
+                                            <br>
+                                            Winter Jacket
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card border-0 rounded-0">
+                                        <img src="https://cdn.shopify.com/s/files/1/0895/1746/files/Screenshot_2022-01-28_at_16.15.03_2048x.png?v=1646223861"
+                                            alt="" style="max-width: 360px; height: 320px">
+                                        <div class="d-flex align-self-end"
+                                            style="position: absolute; bottom: 0; height: 37px; width: 100%; background-color: rgba(65, 65, 65, 0.5);">
+                                            <p class="text-white" style="margin: auto;">Hats</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-4 d-flex justify-content-center" style="height: 410px;">
+                <div class="col-7" style="max-width: 850px;">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined" style="font-size: 52px;">eco</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">Sustainable Production</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined" style="font-size: 52px;">language</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">Shipping Worldwide</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size: 52px;">recycling</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">Using Recycled Materials</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size: 52px; transform: rotate(-80deg);">replay</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">Free Returns <br> within 14 days</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-4">
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined" style="font-size: 52px;">lock</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">Secure Payment System</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined" style="font-size: 52px;">percent</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">20% Off on First Order</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <div style="height: 85px; width: 85px; color: #fa766a; border: 4px solid #fa766a; border-radius: 50%;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <span class="material-symbols-outlined"
+                                            style="font-size: 52px;">airport_shuttle</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <h5 class="text-center">Local Products</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-4"
+                style="height: 430px; background-image: url('https://cdn.shopify.com/s/files/1/0895/1746/files/alexey-ruban-Dac1Yw8u3No-unsplash_cropped.jpg?v=1652436527');">
+                <div class="col-4 p-4" style="background: rgba(255, 255, 255, 0.8); max-width: 500px;">
+                    <div>
+                        <h1 class="card-title" style="font-size: 40px;">
+                            The adrenaline of an adventure is worth than a thousand of peaceful days
+
+                        </h1>
+                        <p class="card-text mt-3" style="font-size: 15px;">
+                            Some are born adrenaline junkies, while others experiment with their comfort level, pushing
+                            those boundaries at various times.
+                        </p>
+                        <button class="btn border border-2 border-dark rounded-0 px-3">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-4 mt-4 d-flex justify-content-center" style="height: 628px;">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex align-items-center mb-3">
+                                <h6 class="mt-3" style="color: #fa766a;">
+                                    Journal
+
+                                </h6>
+                                <span class="material-symbols-outlined ms-1" style="color: #fa766a;">rss_feed</span>
+                            </div>
+                            <h1>
+                                A slow path
+                            </h1>
+                            <h5 class="mb-4" style="font-weight: 400;">Posted on June 21, 2022</h5>
+                            <div class="border-top border-4 border-dark mb-3" style="max-width: 70px;"></div>
+                            <p>
+                                <span>Well, maybe crossing the Alps by bike is not one of those remarkable deed all the
+                                    world should know. I mean, thousands of people do a similar trip every year.
+                                    Thousands.
+                                    They grab their bike, plan their route, they can choose to go there alone or in
+                                    groups,
+                                    with some friends or colleagues. While you’re crossing the highest mountains of
+                                    Europe,
+                                    you probably will not bump into fierce bears and hostile wolves. In all probability,
+                                    you
+                                    will not meet a savage wilderness or lose yourself in an uncharted territory. But,
+                                    in
+                                    the end, what makes an experience really worth?</span>
+                            </p>
+                            <button class="btn border border-2 border-dark rounded-0 px-3">Read entire article</button>
+                            <ul class="nav mt-3">
+                                <li class="nav-item">
+                                    <i class="fa-regular fa-comment fa-lg" style="color: #fa766a;"></i>
+                                    <a href="" class="text-black">
+                                        2
+                                    </a>
+                                </li>
+                                <li class="nav-item ms-3 d-flex align-items-center">
+                                    <span class="material-symbols-outlined"
+                                        style="transform: rotateY(180deg); color: #fa766a;">sell</span>
+                                    <a href="" class="ms-2 text-black">
+                                        Camping
+                                    </a>
+                                </li>
+                                <li class="nav-item ms-3">
+                                    <a href="" class="text-black">Inspiration</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center mb-3 text-white">
+                                <h6 class="mt-3 text-white" style="color: #fa766a;">
+                                    <strong>
+                                        Journal
+                                    </strong>
+                                </h6>
+                                <span class="material-symbols-outlined ms-1 text-white"
+                                    style="color: #fa766a;">rss_feed</span>
+                            </div>
+                            <h1>
+                                Chasing the light
+                            </h1>
+                            <h5 class="mb-4" style="font-weight: 400;">Posted on May 12, 2022</h5>
+                            <div class="border-top border-4 border-dark mb-3" style="max-width: 70px;"></div>
+                            <p>
+                                <span>As fascination with this mystical island mounts, Iceland’s call can be heard
+                                    amongst
+                                    the tribe. They are seeking out a new wave, a wave that comes with different
+                                    experiences, different expectations and different rules. What they seek isn’t easily
+                                    found, but when they find it, it’s felt right to the core. These frozen rumbles are
+                                    chilling the hairs on the back of surfers necks across the globe. Chris Burkard is
+                                    one
+                                    surfer that has felt the call and has become captivated by this arcane landscape,
+                                    where
+                                    the true spirit of isolation can be experienced where no man has surfed
+                                    before.</span>
+                            </p>
+                            <button class="btn border border-2 border-dark rounded-0 px-3">Read entire article</button>
+                            <ul class="nav mt-3">
+                                <li class="nav-item">
+                                    <i class="fa-regular fa-comment fa-lg" style="color: #fa766a;"></i>
+                                    <a href="" class="text-black">
+                                        1
+                                    </a>
+                                </li>
+                                <li class="nav-item ms-3 d-flex align-items-center">
+                                    <span class="material-symbols-outlined"
+                                        style="transform: rotateY(180deg); color: #fa766a;">sell</span>
+                                    <a href="" class="ms-2 text-black">
+                                        New products
+                                    </a>
+                                </li>
+                                <li class="nav-item ms-3">
+                                    <a href="" class="text-black">Winter</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div id="map" style="height: 496px;" class="p-4 w-100"></div>
+            </div>
+        </section>
+
+        <section class="p-4 bg-white">
+            <div class="p-4 mx-4 d-flex justify-content-center" style="background: #f3f0ee;">
+                <div class="col-lg-6">
+                    <div class="py-3">
+                        <div class="pb-4">
+                            <h1 class="text-center">
+                                Sign up dan save
+                            </h1>
+                            <h4 class="text-center">
+                                Promotions, new products and sales. Directly to your inbox.
+                            </h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="email" class="form-control py-2 rounded-0 border-0" placeholder="Your email"
+                                style="max-width: 410px;">
+                            <button class="btn btn-dark rounded-0 ms-2">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="px-4">
+        <div class=" mx-4 text-white">
+            <div class="p-3 px-4" style="background-color: #1c1e20;">
+                <div class="row">
+                    <div class="col">
+                        <h6 style="color: #fa766a;" class="mb-2">
+                            Quick links
+                        </h6>
+                        <ul class="nav flex-column">
+                            <li class="mb-1">
+                                <a href="" class="text-white" style="font-size: 14px;">Catalog</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="" class="text-white" style="font-size: 14px;">Collections</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="" class="text-white" style="font-size: 14px;">About us</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="" class="text-white" style="font-size: 14px;">Journal</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6 style="color: #fa766a;" class="mb-2">
+                            Contact us
+                        </h6>
+                        <ul class="nav flex-column">
+                            <li class="mb-1">
+                                <span class="text-white" style="font-size: 14px;">1360 Lombard Street</span>
+                            </li>
+                            <li class="mb-1">
+                                <span class="text-white" style="font-size: 14px;">San Francisco, CA 94109</span>
+                            </li>
+                            <li class="mb-1">
+                                <a class="text-white" style="font-size: 14px;">support@company.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6 style="color: #fa766a;" class="mb-2">
+                            About us
+                        </h6>
+                        <ul class="nav flex-column">
+                            <li class="mb-1">
+                                <span class="text-white" style="font-size: 14px;">Our products bring together the finest
+                                    materials</span>
+                            </li>
+                            <li class="mb-1">
+                                <span class="text-white" style="font-size: 14px;">and stunning design to create
+                                    something special.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6 style="color: #fa766a;" class="mb-3 text-end">
+                            Connect with us
+                        </h6>
+                        <ul class="nav d-flex justify-content-end">
+                            <li class="ms-4">
+                                <a href="" class="text-white">
+                                    <i class="fa-brands fa-facebook-f fa-xl"></i>
+                                </a>
+                            </li>
+                            <li class="ms-4">
+                                <a href="" class="text-white">
+                                    <i class="fa-brands fa-twitter fa-xl"></i>
+                                </a>
+                            </li>
+                            <li class="ms-4">
+                                <a href="" class="text-white">
+                                    <i class="fa-brands fa-pinterest-p fa-xl"></i>
+                                </a>
+                            </li>
+                            <li class="ms-4">
+                                <a href="" class="text-white">
+                                    <i class="fa-brands fa-instagram fa-xl"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 px-4 bg-black">
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        © Copyright 2022, Colors. Powered by Shopify
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <button class="btn bg-black border-white text-white d-flex align-items-center">
+                            English
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </button>
+                        <button class="btn bg-black border-white text-white d-flex align-items-center ms-2">
+                            United States (USD $)
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0NhoNoAFWJX9xDNfe6yEbUp1lR5CBSXo&callback=initMap&v=weekly"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+</body>
+<script>
+    var items = []
+    var data = {
+        products: {
+            olive: {
+                product_name: 'Aluminium canteen',
+                product_color: 'Olive',
+                product_price: 35,
+                product_image: 'https://cdn.shopify.com/s/files/1/0895/1746/products/Cantimplora_vintage03_1024x1024.jpg?v=1620889398'
+            },
+            golden_rod: {
+                product_name: 'Aluminium canteen',
+                product_color: 'GoldenRod',
+                product_price: 35,
+                product_image: 'https://cdn.shopify.com/s/files/1/0895/1746/products/Cantimplora_vintage01_1024x1024.jpg?v=1620889382'
+            }
+        }
+    }
+    $(document).ready(
+        showCartItemCount,
+        window.localStorage.setItem('cartItems', JSON.stringify(items))
+    )
+
+    function showDrawer() {
+        let sidebar = $('div[name="sidebar"]')
+        sidebar.toggleClass('show')
+        if (sidebar.hasClass('show')) {
+            $('main').css({
+                'margin-right': '399px'
+            })
+        } else {
+            $('main').css({
+                'margin-right': '399px'
+            })
+        }
+    }
+
+    function showCartItemCount() {
+        let arr = JSON.parse(window.localStorage.getItem('cartItems'))
+        let count = arr.length
+        if (count > 0) {
+            $('.badge').toggleClass('d-none');
+            $('.badge').text(count)
+        }
+    }
+
+    function addToCart() {
+        let product = null
+        let selected_product = $('input[name="color"]:checked').val()
+        if (selected_product === 'Olive') {
+            product = data.products.olive
+        } else {
+            product = data.products.golden_rod
+        }
+        let existing_data = JSON.parse(window.localStorage.getItem('cartItems'))
+
+        existing_data.push(product)
+
+        window.localStorage.setItem('cartItems', JSON.stringify(existing_data))
+        if (existing_data.length > 0) {
+            $('.badge').removeClass('d-none');
+            $('.badge').text(existing_data.length)
+        }
+        console.log(existing_data)
+    }
+
+    function handleColor() {
+        let color = document.querySelector('input[name="color"]:checked').value;
+        let selected_color = document.querySelector('span[name="selected_color"]')
+        selected_color.innerHTML = color
+    }
+
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        const uluru = {
+            lat: -25.344,
+            lng: 131.031
+        };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
+    }
+
+    window.initMap = initMap;
+</script>
+
+</html>
